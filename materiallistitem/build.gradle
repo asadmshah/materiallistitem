@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 23
@@ -18,8 +20,56 @@ android {
     }
 }
 
+group = 'com.asadmshah.materiallistitem'
+version = '0.1.1'
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0'
 }
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+
+    pkg {
+        repo = 'maven'
+        name = 'materiallistitem'
+        version {
+            name = '0.1.1-materiallistitem'
+            desc = 'Views based on the material design spec that can be used within a ListView or RecyclerView.'
+            released = new Date()
+            vcsTag = '0.1.1'
+        }
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://bitbucket.org/asadmshah/materiallistitems.git'
+        websiteUrl = 'https://bitbucket.org/asadmshah/materiallistitems'
+    }
+}
+
