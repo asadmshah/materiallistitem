@@ -6,9 +6,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Single line list item to be used in ListViews or RecyclerViews.
- *
- * See <a href="https://www.google.com/design/spec/components/lists.html#lists-specs">Components - Lists</a>
+ * List item consisting of a single line with a title.
  */
 public class SingleLineTextOnlyView extends BaseView {
 

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by asadmshah on 10/19/15.
+ * List item consisting of a single line with a checkbox, an icon, and a title.
  */
 public class SingleLineCheckboxWithIconAndTextView extends BaseView {
 

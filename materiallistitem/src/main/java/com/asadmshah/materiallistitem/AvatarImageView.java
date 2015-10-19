@@ -16,7 +16,7 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 /**
- * Created by asadmshah on 10/19/15.
+ * Variant of {@link android.widget.ImageView} that masks the image in an oval.
  */
 public class AvatarImageView extends ImageView {
 

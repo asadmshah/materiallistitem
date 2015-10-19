@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Created by asadmshah on 10/19/15.
+ * List item consisting of three lines with a title and a subtitle.
  */
 public class ThreeLineTextOnlyView extends BaseView {
 

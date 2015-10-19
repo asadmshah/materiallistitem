@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by asadmshah on 10/18/15.
+ * List item consisting of a single line with an icon and a title.
  */
 public class SingleLineIconWithTextView extends BaseView {
 

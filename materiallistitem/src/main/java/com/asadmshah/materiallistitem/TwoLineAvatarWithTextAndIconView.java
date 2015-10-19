@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by asadmshah on 10/19/15.
+ * List item consisting of two lines with an avatar, a title, a subtitle, and an icon.
  */
 public class TwoLineAvatarWithTextAndIconView extends BaseView {
 

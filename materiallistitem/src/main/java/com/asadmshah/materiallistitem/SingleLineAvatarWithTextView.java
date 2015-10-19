@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Created by asadmshah on 10/18/15.
+ * List item consisting of a single line with an avatar and a title.
  */
 public class SingleLineAvatarWithTextView extends BaseView {
 
