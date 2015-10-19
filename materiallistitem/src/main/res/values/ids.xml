@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="listItemTitle" />
+    <item type="id" name="listItemIcon" />
+    <item type="id" name="listItemSubtitle" />
+    <item type="id" name="listItemAvatar" />
+    <item type="id" name="listItemCheckbox" />
+</resources>

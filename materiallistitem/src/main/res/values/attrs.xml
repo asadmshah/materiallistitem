@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="textForTitle" format="string" />
+    <attr name="textColorForTitle" format="color" />
+    <attr name="textForSubtitle" format="string" />
+    <attr name="textColorForSubtitle" format="color" />
+    <attr name="iconSrc" format="reference" />
+    <attr name="iconTint" format="color" />
+    <attr name="avatarSrc" format="reference" />
+
+    <declare-styleable name="SingleLineTextOnlyView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+    </declare-styleable>
+
+    <declare-styleable name="SingleLineIconWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+    </declare-styleable>
+
+    <declare-styleable name="SingleLineAvatarWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+    <declare-styleable name="SingleLineAvatarWithTextAndIconView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+    <declare-styleable name="TwoLineTextOnlyView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+    </declare-styleable>
+
+    <declare-styleable name="TwoLineIconWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+    </declare-styleable>
+
+    <declare-styleable name="TwoLineAvatarWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+    <declare-styleable name="TwoLineAvatarWithTextAndIconView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+    <declare-styleable name="ThreeLineTextOnlyView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+    </declare-styleable>
+
+    <declare-styleable name="ThreeLineIconWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+    </declare-styleable>
+
+    <declare-styleable name="ThreeLineAvatarWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+    <declare-styleable name="ThreeLineAvatarWithTextAndIconView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="textForSubtitle" />
+        <attr name="textColorForSubtitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+    <declare-styleable name="SingleLineCheckboxWithTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+    </declare-styleable>
+
+    <declare-styleable name="SingleLineCheckboxWithIconAndTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="iconSrc" />
+        <attr name="iconTint" />
+    </declare-styleable>
+
+    <declare-styleable name="SingleLineCheckboxWithAvatarAndTextView">
+        <attr name="textForTitle" />
+        <attr name="textColorForTitle" />
+        <attr name="avatarSrc" />
+    </declare-styleable>
+
+</resources>

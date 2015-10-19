@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        layout="@layout/view_icon"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="@dimen/startKeyLine1"
+        android:layout_marginLeft="@dimen/startKeyLine1"
+        />
+
+    <include
+        layout="@layout/view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/startKeyLine2"
+        android:layout_marginLeft="@dimen/startKeyLine2"
+        android:layout_marginEnd="@dimen/endKeyLine2"
+        android:layout_marginRight="@dimen/endKeyLine2"
+        />
+
+    <include
+        layout="@layout/view_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="@dimen/endKeyLine1"
+        android:layout_marginRight="@dimen/endKeyLine1"
+        />
+
+</merge>

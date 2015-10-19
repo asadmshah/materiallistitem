@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="singleLineListItemHeight">48dp</dimen>
+    <dimen name="singleLineListItemWithAvatarHeight">56dp</dimen>
+    <dimen name="twoLineListItemHeight">72dp</dimen>
+    <dimen name="threeLineListItemHeight">88dp</dimen>
+    <dimen name="titleMarginTop">16dp</dimen>
+    <dimen name="subtitleMarginBottom">16dp</dimen>
+    <dimen name="iconSize">24dp</dimen>
+    <dimen name="avatarSize">40dp</dimen>
+    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="subtitleTextSize">14sp</dimen>
+    <dimen name="startKeyLine1">16dp</dimen>
+    <dimen name="startKeyLine2">72dp</dimen>
+    <dimen name="endKeyLine1">16dp</dimen>
+    <dimen name="endKeyLine2">56dp</dimen>
+</resources>
