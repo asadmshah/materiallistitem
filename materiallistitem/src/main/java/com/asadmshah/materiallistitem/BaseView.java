@@ -3,7 +3,9 @@ package com.asadmshah.materiallistitem;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.annotation.ColorInt;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
@@ -90,6 +92,48 @@ abstract class BaseView extends FrameLayout {
      */
     protected void prepareChildViews() {
 
+    }
+
+    /**
+     * Prepares the TextView with custom attributes.
+     *
+     * @param view The TextView to setup
+     * @param title The text to display
+     * @param color The color of the text.
+     */
+    protected void prepareTextViewWithAttrValues(TextView view, String title, @ColorInt int color) {
+        if (title != null) {
+            view.setText(title);
+        }
+        if (color != -1) {
+            view.setTextColor(color);
+        }
+    }
+
+    /**
+     * Prepares the icon with custom attributes.
+     *
+     * @param iconDrawable The drawable to display
+     * @param iconTintColor The color to tint the drawable with
+     */
+    protected void prepareIconViewWithAttrValues(Drawable iconDrawable, @ColorInt int iconTintColor) {
+        if (iconDrawable != null) {
+            mViewIcon.setImageDrawable(iconDrawable);
+        }
+        if (iconTintColor != -1) {
+            mViewIcon.setColorFilter(iconTintColor);
+        }
+    }
+
+    /**
+     * Prepares the avatar with custom attributes.
+     *
+     * @param avatarDrawable The drawable to display
+     */
+    protected void prepareAvatarViewWithAttrValues(Drawable avatarDrawable) {
+        if (avatarDrawable != null) {
+            mViewAvatar.setImageDrawable(avatarDrawable);
+        }
     }
 
     /**

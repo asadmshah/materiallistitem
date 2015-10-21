@@ -42,8 +42,8 @@ public class SingleLineCheckboxWithTextView extends BaseView {
         String titleText = attrs.getString(R.styleable.SingleLineCheckboxWithTextView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.SingleLineCheckboxWithTextView_textColorForTitle, -1);
         attrs.recycle();
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
+
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
     }
 
     @Override

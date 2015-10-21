@@ -46,10 +46,8 @@ public class SingleLineIconWithTextView extends BaseView {
         int iconTint = attrs.getColor(R.styleable.SingleLineIconWithTextView_iconTint, -1);
         attrs.recycle();
 
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
-        if (iconSrc != null) mViewIcon.setImageDrawable(iconSrc);
-        if (iconTint != -1) mViewIcon.setColorFilter(iconTint);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareIconViewWithAttrValues(iconSrc, iconTint);
     }
 
     @Override

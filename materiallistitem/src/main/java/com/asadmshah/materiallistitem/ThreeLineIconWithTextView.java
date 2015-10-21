@@ -48,12 +48,9 @@ public class ThreeLineIconWithTextView extends BaseView {
         int iconTint = attrs.getColor(R.styleable.ThreeLineIconWithTextView_iconTint, -1);
         attrs.recycle();
 
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
-        if (subtitleText != null) mViewSubtitle.setText(subtitleText);
-        if (subtitleTextColor != -1) mViewSubtitle.setTextColor(subtitleTextColor);
-        if (iconSrc != null) mViewIcon.setImageDrawable(iconSrc);
-        if (iconTint != -1) mViewIcon.setColorFilter(iconTint);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
+        prepareIconViewWithAttrValues(iconSrc, iconTint);
     }
 
     @Override

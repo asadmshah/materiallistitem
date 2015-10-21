@@ -47,11 +47,9 @@ public class SingleLineAvatarWithTextAndIconView extends BaseView {
         Drawable avatarSrc = attrs.getDrawable(R.styleable.SingleLineAvatarWithTextAndIconView_avatarSrc);
         attrs.recycle();
 
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
-        if (iconSrc != null) mViewIcon.setImageDrawable(iconSrc);
-        if (iconTint != -1) mViewIcon.setColorFilter(iconTint);
-        if (avatarSrc != null) mViewAvatar.setImageDrawable(avatarSrc);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareIconViewWithAttrValues(iconSrc, iconTint);
+        prepareAvatarViewWithAttrValues(avatarSrc);
     }
 
     @Override

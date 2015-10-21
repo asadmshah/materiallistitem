@@ -45,11 +45,10 @@ public class TwoLineAvatarWithTextView extends BaseView {
         int subtitleTextColor = attrs.getColor(R.styleable.TwoLineAvatarWithTextView_textColorForSubtitle, -1);
         Drawable avatarSrc = attrs.getDrawable(R.styleable.TwoLineAvatarWithTextView_avatarSrc);
         attrs.recycle();
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
-        if (subtitleText != null) mViewSubtitle.setText(subtitleText);
-        if (subtitleTextColor != -1) mViewSubtitle.setTextColor(subtitleTextColor);
-        if (avatarSrc != null) mViewAvatar.setImageDrawable(avatarSrc);
+
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
+        prepareAvatarViewWithAttrValues(avatarSrc);
     }
 
     @Override

@@ -48,10 +48,9 @@ public class TwoLineTextOnlyView extends BaseView {
         String subtitleText = attrs.getString(R.styleable.TwoLineTextOnlyView_textForSubtitle);
         int subtitleTextColor = attrs.getColor(R.styleable.TwoLineTextOnlyView_textColorForSubtitle, -1);
         attrs.recycle();
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
-        if (subtitleText != null) mViewSubtitle.setText(subtitleText);
-        if (subtitleTextColor != -1) mViewSubtitle.setTextColor(subtitleTextColor);
+
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
     }
 
     @Override

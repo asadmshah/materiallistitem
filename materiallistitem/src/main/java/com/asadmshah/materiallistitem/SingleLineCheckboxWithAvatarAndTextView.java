@@ -44,9 +44,9 @@ public class SingleLineCheckboxWithAvatarAndTextView extends BaseView {
         int titleTextColor = attrs.getColor(R.styleable.SingleLineCheckboxWithAvatarAndTextView_textColorForTitle, -1);
         Drawable avatarSrc = attrs.getDrawable(R.styleable.SingleLineCheckboxWithAvatarAndTextView_avatarSrc);
         attrs.recycle();
-        if (titleText != null) mViewTitle.setText(titleText);
-        if (titleTextColor != -1) mViewTitle.setTextColor(titleTextColor);
-        if (avatarSrc != null) mViewAvatar.setImageDrawable(avatarSrc);
+
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareAvatarViewWithAttrValues(avatarSrc);
     }
 
     @Override
