@@ -28,10 +28,21 @@ type used):
 ```xml
     <attr name="textForTitle" format="string" />
     <attr name="textColorForTitle" format="color" />
+    <attr name="textSizeForTitle" format="dimension" />
+    <attr name="textStyleForTitle" format="enum">
+    <attr name="typefaceForTitle" format="enum">
+    <attr name="fontFamilyForTitle" format="string" />
+
     <attr name="textForSubtitle" format="string" />
     <attr name="textColorForSubtitle" format="color" />
+    <attr name="textSizeForSubtitle" format="dimension" />
+    <attr name="textStyleForSubtitle" format="enum">
+    <attr name="typefaceForSubtitle" format="enum">
+    <attr name="fontFamilyForSubtitle" format="string" />
+
     <attr name="iconSrc" format="reference" />
     <attr name="iconTint" format="color" />
+    
     <attr name="avatarSrc" format="reference" />
 ```
 
