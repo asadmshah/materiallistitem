@@ -21,7 +21,7 @@ android {
 }
 
 group = 'com.asadmshah.materiallistitem'
-version = '0.1.1'
+version = '0.1.2'
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -62,10 +62,10 @@ bintray {
         repo = 'maven'
         name = 'materiallistitem'
         version {
-            name = '0.1.1-materiallistitem'
+            name = '0.1.2-materiallistitem'
             desc = 'Views based on the material design spec that can be used within a ListView or RecyclerView.'
             released = new Date()
-            vcsTag = '0.1.1'
+            vcsTag = '0.1.2'
         }
         licenses = ['Apache-2.0']
         vcsUrl = 'https://bitbucket.org/asadmshah/materiallistitems.git'
