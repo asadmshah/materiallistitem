@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
@@ -43,11 +44,15 @@ public class SingleLineCheckboxWithIconAndTextView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.SingleLineCheckboxWithIconAndTextView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.SingleLineCheckboxWithIconAndTextView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.SingleLineCheckboxWithIconAndTextView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.SingleLineCheckboxWithIconAndTextView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.SingleLineCheckboxWithIconAndTextView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.SingleLineCheckboxWithIconAndTextView_fontFamilyForTitle);
         Drawable iconSrc = attrs.getDrawable(R.styleable.SingleLineCheckboxWithIconAndTextView_iconSrc);
         int iconTint = attrs.getColor(R.styleable.SingleLineCheckboxWithIconAndTextView_iconTint, -1);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
         prepareIconViewWithAttrValues(iconSrc, iconTint);
     }
 

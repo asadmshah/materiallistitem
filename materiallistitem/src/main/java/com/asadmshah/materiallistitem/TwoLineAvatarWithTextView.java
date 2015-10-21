@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.TextView;
@@ -41,13 +42,21 @@ public class TwoLineAvatarWithTextView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.TwoLineAvatarWithTextView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.TwoLineAvatarWithTextView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.TwoLineAvatarWithTextView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.TwoLineAvatarWithTextView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.TwoLineAvatarWithTextView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.TwoLineAvatarWithTextView_fontFamilyForTitle);
         String subtitleText = attrs.getString(R.styleable.TwoLineAvatarWithTextView_textForSubtitle);
         int subtitleTextColor = attrs.getColor(R.styleable.TwoLineAvatarWithTextView_textColorForSubtitle, -1);
+        float subtitleTextSize = attrs.getDimension(R.styleable.TwoLineAvatarWithTextView_textSizeForSubtitle, -1);
+        int subtitleTextStyle = attrs.getInt(R.styleable.TwoLineAvatarWithTextView_textStyleForSubtitle, Typeface.NORMAL);
+        int subtitleTypeface = attrs.getInt(R.styleable.TwoLineAvatarWithTextView_typefaceForSubtitle, 0);
+        String subtitleFontFamily = attrs.getString(R.styleable.TwoLineAvatarWithTextView_fontFamilyForSubtitle);
         Drawable avatarSrc = attrs.getDrawable(R.styleable.TwoLineAvatarWithTextView_avatarSrc);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
-        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor, subtitleTextSize, subtitleTextStyle, subtitleTypeface, subtitleFontFamily);
         prepareAvatarViewWithAttrValues(avatarSrc);
     }
 

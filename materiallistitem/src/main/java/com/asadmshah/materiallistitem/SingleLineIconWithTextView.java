@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -42,11 +43,15 @@ public class SingleLineIconWithTextView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.SingleLineIconWithTextView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.SingleLineIconWithTextView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.SingleLineIconWithTextView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.SingleLineIconWithTextView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.SingleLineIconWithTextView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.SingleLineIconWithTextView_fontFamilyForTitle);
         Drawable iconSrc = attrs.getDrawable(R.styleable.SingleLineIconWithTextView_iconSrc);
         int iconTint = attrs.getColor(R.styleable.SingleLineIconWithTextView_iconTint, -1);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
         prepareIconViewWithAttrValues(iconSrc, iconTint);
     }
 

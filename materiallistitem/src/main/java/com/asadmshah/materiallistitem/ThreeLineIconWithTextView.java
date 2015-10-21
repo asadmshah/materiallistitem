@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -42,14 +43,22 @@ public class ThreeLineIconWithTextView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.ThreeLineIconWithTextView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.ThreeLineIconWithTextView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.ThreeLineIconWithTextView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.ThreeLineIconWithTextView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.ThreeLineIconWithTextView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.ThreeLineIconWithTextView_fontFamilyForTitle);
         String subtitleText = attrs.getString(R.styleable.ThreeLineIconWithTextView_textForSubtitle);
         int subtitleTextColor = attrs.getColor(R.styleable.ThreeLineIconWithTextView_textColorForSubtitle, -1);
+        float subtitleTextSize = attrs.getDimension(R.styleable.ThreeLineIconWithTextView_textSizeForSubtitle, -1);
+        int subtitleTextStyle = attrs.getInt(R.styleable.ThreeLineIconWithTextView_textStyleForSubtitle, Typeface.NORMAL);
+        int subtitleTypeface = attrs.getInt(R.styleable.ThreeLineIconWithTextView_typefaceForSubtitle, 0);
+        String subtitleFontFamily = attrs.getString(R.styleable.ThreeLineIconWithTextView_fontFamilyForSubtitle);
         Drawable iconSrc = attrs.getDrawable(R.styleable.ThreeLineIconWithTextView_iconSrc);
         int iconTint = attrs.getColor(R.styleable.ThreeLineIconWithTextView_iconTint, -1);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
-        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor, subtitleTextSize, subtitleTextStyle, subtitleTypeface, subtitleFontFamily);
         prepareIconViewWithAttrValues(iconSrc, iconTint);
     }
 

@@ -3,16 +3,22 @@ package com.asadmshah.materiallistitem;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 abstract class BaseView extends FrameLayout {
+
+    private static final int TYPEFACE_SANS = 1;
+    private static final int TYPEFACE_SERIF = 2;
+    private static final int TYPEFACE_MONOSPACE = 3;
 
     protected TextView mViewTitle;
     protected TextView mViewSubtitle;
@@ -101,13 +107,37 @@ abstract class BaseView extends FrameLayout {
      * @param title The text to display
      * @param color The color of the text.
      */
-    protected void prepareTextViewWithAttrValues(TextView view, String title, @ColorInt int color) {
+    protected void prepareTextViewWithAttrValues(TextView view, String title, @ColorInt int color, float size,
+                                                 int styleIndex, int typefaceIndex, String familyName) {
         if (title != null) {
             view.setText(title);
         }
         if (color != -1) {
             view.setTextColor(color);
         }
+        if (size != -1) {
+            view.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
+        }
+        Typeface tf = null;
+        if (familyName != null) {
+            tf = Typeface.create(familyName, styleIndex);
+            if (tf != null) {
+                view.setTypeface(tf);
+                return;
+            }
+        }
+        switch (typefaceIndex) {
+            case TYPEFACE_SANS:
+                tf = Typeface.SANS_SERIF;
+                break;
+            case TYPEFACE_SERIF:
+                tf = Typeface.SERIF;
+                break;
+            case TYPEFACE_MONOSPACE:
+                tf = Typeface.MONOSPACE;
+                break;
+        }
+        view.setTypeface(tf, styleIndex);
     }
 
     /**

@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -45,12 +46,20 @@ public class TwoLineTextOnlyView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.TwoLineTextOnlyView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.TwoLineTextOnlyView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.TwoLineTextOnlyView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.TwoLineTextOnlyView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.TwoLineTextOnlyView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.TwoLineTextOnlyView_fontFamilyForTitle);
         String subtitleText = attrs.getString(R.styleable.TwoLineTextOnlyView_textForSubtitle);
         int subtitleTextColor = attrs.getColor(R.styleable.TwoLineTextOnlyView_textColorForSubtitle, -1);
+        float subtitleTextSize = attrs.getDimension(R.styleable.TwoLineTextOnlyView_textSizeForSubtitle, -1);
+        int subtitleTextStyle = attrs.getInt(R.styleable.TwoLineTextOnlyView_textStyleForSubtitle, Typeface.NORMAL);
+        int subtitleTypeface = attrs.getInt(R.styleable.TwoLineTextOnlyView_typefaceForSubtitle, 0);
+        String subtitleFontFamily = attrs.getString(R.styleable.TwoLineTextOnlyView_fontFamilyForSubtitle);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
-        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor, subtitleTextSize, subtitleTextStyle, subtitleTypeface, subtitleFontFamily);
     }
 
     @Override

@@ -3,20 +3,58 @@
 
     <attr name="textForTitle" format="string" />
     <attr name="textColorForTitle" format="color" />
+    <attr name="textSizeForTitle" format="dimension" />
+    <attr name="textStyleForTitle" format="enum">
+        <enum name="normal" value="0" />
+        <enum name="bold" value="1" />
+        <enum name="italic" value="2" />
+        <enum name="boldItalic" value="3" />
+    </attr>
+    <attr name="typefaceForTitle" format="enum">
+        <enum name="sans" value="1" />
+        <enum name="serif" value="2" />
+        <enum name="monospace" value="3" />
+    </attr>
+    <attr name="fontFamilyForTitle" format="string" />
+
     <attr name="textForSubtitle" format="string" />
     <attr name="textColorForSubtitle" format="color" />
+    <attr name="textSizeForSubtitle" format="dimension" />
+    <attr name="textStyleForSubtitle" format="enum">
+        <enum name="normal" value="0" />
+        <enum name="bold" value="1" />
+        <enum name="italic" value="2" />
+        <enum name="boldItalic" value="3" />
+    </attr>
+    <attr name="typefaceForSubtitle" format="enum">
+        <enum name="sans" value="1" />
+        <enum name="serif" value="2" />
+        <enum name="monospace" value="3" />
+    </attr>
+    <attr name="fontFamilyForSubtitle" format="string" />
+
     <attr name="iconSrc" format="reference" />
     <attr name="iconTint" format="color" />
+    
     <attr name="avatarSrc" format="reference" />
 
     <declare-styleable name="SingleLineTextOnlyView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
     </declare-styleable>
 
     <declare-styleable name="SingleLineIconWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
     </declare-styleable>
@@ -24,29 +62,59 @@
     <declare-styleable name="SingleLineAvatarWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 
     <declare-styleable name="SingleLineAvatarWithTextAndIconView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 
     <declare-styleable name="TwoLineTextOnlyView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
     </declare-styleable>
 
     <declare-styleable name="TwoLineIconWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
     </declare-styleable>
@@ -54,33 +122,73 @@
     <declare-styleable name="TwoLineAvatarWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 
     <declare-styleable name="TwoLineAvatarWithTextAndIconView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 
     <declare-styleable name="ThreeLineTextOnlyView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
     </declare-styleable>
 
     <declare-styleable name="ThreeLineIconWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
     </declare-styleable>
@@ -88,29 +196,59 @@
     <declare-styleable name="ThreeLineAvatarWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 
     <declare-styleable name="ThreeLineAvatarWithTextAndIconView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="textForSubtitle" />
         <attr name="textColorForSubtitle" />
+        <attr name="textSizeForSubtitle" />
+        <attr name="textStyleForSubtitle" />
+        <attr name="typefaceForSubtitle" />
+        <attr name="fontFamilyForSubtitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 
     <declare-styleable name="SingleLineCheckboxWithTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
     </declare-styleable>
 
     <declare-styleable name="SingleLineCheckboxWithIconAndTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="iconSrc" />
         <attr name="iconTint" />
     </declare-styleable>
@@ -118,6 +256,11 @@
     <declare-styleable name="SingleLineCheckboxWithAvatarAndTextView">
         <attr name="textForTitle" />
         <attr name="textColorForTitle" />
+        <attr name="textSizeForTitle" />
+        <attr name="textStyleForTitle" />
+        <attr name="typefaceForTitle" />
+        <attr name="fontFamilyForTitle" />
+
         <attr name="avatarSrc" />
     </declare-styleable>
 

@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 import android.widget.TextView;
@@ -41,9 +42,13 @@ public class SingleLineCheckboxWithTextView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.SingleLineCheckboxWithTextView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.SingleLineCheckboxWithTextView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.SingleLineCheckboxWithTextView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.SingleLineCheckboxWithTextView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.SingleLineCheckboxWithTextView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.SingleLineCheckboxWithTextView_fontFamilyForTitle);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
     }
 
     @Override

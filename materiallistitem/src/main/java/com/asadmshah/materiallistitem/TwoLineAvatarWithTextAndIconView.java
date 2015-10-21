@@ -2,6 +2,7 @@ package com.asadmshah.materiallistitem;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -42,15 +43,23 @@ public class TwoLineAvatarWithTextAndIconView extends BaseView {
     protected void useStyleAttributes(TypedArray attrs) {
         String titleText = attrs.getString(R.styleable.TwoLineAvatarWithTextAndIconView_textForTitle);
         int titleTextColor = attrs.getColor(R.styleable.TwoLineAvatarWithTextAndIconView_textColorForTitle, -1);
+        float titleTextSize = attrs.getDimension(R.styleable.TwoLineAvatarWithTextAndIconView_textSizeForTitle, -1);
+        int titleTextStyle = attrs.getInt(R.styleable.TwoLineAvatarWithTextAndIconView_textStyleForTitle, Typeface.NORMAL);
+        int titleTypeface = attrs.getInt(R.styleable.TwoLineAvatarWithTextAndIconView_typefaceForTitle, 0);
+        String titleFontFamily = attrs.getString(R.styleable.TwoLineAvatarWithTextAndIconView_fontFamilyForTitle);
         String subtitleText = attrs.getString(R.styleable.TwoLineAvatarWithTextAndIconView_textForSubtitle);
         int subtitleTextColor = attrs.getColor(R.styleable.TwoLineAvatarWithTextAndIconView_textColorForSubtitle, -1);
+        float subtitleTextSize = attrs.getDimension(R.styleable.TwoLineAvatarWithTextAndIconView_textSizeForSubtitle, -1);
+        int subtitleTextStyle = attrs.getInt(R.styleable.TwoLineAvatarWithTextAndIconView_textStyleForSubtitle, Typeface.NORMAL);
+        int subtitleTypeface = attrs.getInt(R.styleable.TwoLineAvatarWithTextAndIconView_typefaceForSubtitle, 0);
+        String subtitleFontFamily = attrs.getString(R.styleable.TwoLineAvatarWithTextAndIconView_fontFamilyForSubtitle);
         Drawable iconSrc = attrs.getDrawable(R.styleable.TwoLineAvatarWithTextAndIconView_iconSrc);
         int iconTint = attrs.getColor(R.styleable.TwoLineAvatarWithTextAndIconView_iconTint, -1);
         Drawable avatarSrc = attrs.getDrawable(R.styleable.TwoLineAvatarWithTextAndIconView_avatarSrc);
         attrs.recycle();
 
-        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor);
-        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor);
+        prepareTextViewWithAttrValues(mViewTitle, titleText, titleTextColor, titleTextSize, titleTextStyle, titleTypeface, titleFontFamily);
+        prepareTextViewWithAttrValues(mViewSubtitle, subtitleText, subtitleTextColor, subtitleTextSize, subtitleTextStyle, subtitleTypeface, subtitleFontFamily);
         prepareIconViewWithAttrValues(iconSrc, iconTint);
         prepareAvatarViewWithAttrValues(avatarSrc);
     }
